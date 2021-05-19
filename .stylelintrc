@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "indentation": 2,
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "at-rule-no-unknown": [true, {
+      ignoreAtRules: [
+        "apply",
+        "responsive",
+        "screen",
+        "tailwind",
+        "variants",
+        "layer",
+      ]
+    }],
+    "order/properties-alphabetical-order": true
+  }
+}

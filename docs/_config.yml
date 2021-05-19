@@ -1,0 +1,6 @@
+remote_theme: pmarsceill/just-the-docs
+title: FedPack™
+footer_content: 'Copyright &copy; 2021 Viget Labs'
+aux_links:
+  'Github Repo':
+    - '//github.com/vigetlabs/FedPack'

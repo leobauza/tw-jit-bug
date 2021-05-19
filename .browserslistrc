@@ -1,0 +1,15 @@
+# Browsers that we support. This informs autoprefixer and
+# babel-preset-env, which apply code transformations to ensure
+# CSS and JavaScript can run in our target environments.
+# https://github.com/browserslist/browserslist
+# https://browserl.ist/
+
+# Desktop Browsers
+last 1 Chrome major version
+last 1 Firefox major version
+last 1 Safari major version
+last 1 Edge major version
+
+# Mobile Browsers
+last 1 ChromeAndroid major version
+last 1 iOS major version

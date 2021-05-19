@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended"],
+  "overrides": [
+    {
+      "files": ["**/__tests__/**", "*.test.js"],
+      "plugins": ["jest"],
+      "extends": ["eslint:recommended", "plugin:jest/recommended"]
+    },
+    {
+      "files": ["./cypress/**/*.js"],
+      "plugins": ["cypress"],
+      "extends": ["plugin:cypress/recommended"]
+    }
+  ]
+}

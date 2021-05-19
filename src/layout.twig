@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <header class="flex items-center p-16 mb-16 bg-gray-200">
+      <a class="block mr-16 border flex-shrink-0" href="https://github.com/vigetlabs/FedPack">
+        <img class="block rect-logo"
+          srcset="./images/FedPack-480.png 480w, ./images/FedPack-800.png 800w"
+          sizes="(max-width: 600px) 480px, 800px"
+          src="./images/FedPack-800.png"
+          alt="FedPack™ Logo"
+        >
+      </a>
+      <div>
+        <h1>FedPack™
+          <small class="bg-white border rounded p-4 ml-4">
+            <code>v{{ version }}</code>
+          </small>
+        </h1>
+        <p>Webpack isn't hard, it's just the worst</p>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="p-24">
+      <p class="text-center">You are going to need
+        <a target="_blank" href="https://i.imgur.com/ZZn0jrI.gifv">this</a>
+      </p>
+    </footer>
+  </body>
+</html>

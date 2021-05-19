@@ -1,0 +1,74 @@
+{% extends "layout.twig" %}
+
+{% import _self as _ %}
+{% macro codeline(val) %}
+  <code class="text-14 bg-gray-200 px-4">{{ val }}</code>
+{% endmacro %}
+{% set heading = "mb-16" %}
+{% set subheading = "mb-16 text-16" %}
+
+{%- set todo -%}
+  <div class="border-2 bg-gray-200 inline-block p-4 rounded mr-8">
+    <img inline aria-hidden="true" class="text-transparent rect-icon-xs block" src="./src/images/icons/check.svg" />
+    <span class="sr-only">todo</span>
+  </div>
+{%- endset -%}
+
+{%- set check -%}
+  <div class="border-2 border-green bg-green-100 inline-block p-4 rounded shadow mr-8">
+    <img inline aria-hidden="true" class="text-green-500 rect-icon-xs block" src="./src/images/icons/check.svg" />
+    <span class="sr-only">done</span>
+  </div>
+{%- endset -%}
+
+{% block content %}
+  <main class="p-16">
+    <section id="features" class="mb-20 pb-20">
+      <h2 class="{{ heading }}">Features</h2>
+
+      <div class="md:flex">
+        <article class="md:w-1/3 mb-24 md:mb-0 md:pr-16">
+          <h3 class="{{ subheading }}">General</h3>
+          <ul class="list">
+            <li>{{ check }} Make static one pagers</li>
+            <li>{{ check }} fonts using {{ _.codeline("@font-face") }}</li>
+            <li>{{ check }} Images</li>
+            <li>{{ check }} Inline SVGs (no wrapper needed to style)</li>
+            <li>{{ check }} Tailwind {{ _.codeline('1.x') }} setup</li>
+            <li>{{ check }} Templating with Twig</li>
+            <li>{{ check }} <a target="_blank" href="https://github.com/vigetlabs/FedPack">README documentation</a></li>
+            <li>{{ check }} Favicon</li>
+            <li>{{ check }} Welcome Page (this page)</li>
+            <li>{{ check }} Branded FedPack™ Experience</li>
+            <li>{{ check }} Support for multiple pages (see <a href="/sample.html">page 2</a>)</li>
+          </ul>
+        </article>
+        <article class="md:w-1/3 mb-24 md:mb-0 md:px-32">
+          <h3 class="{{ subheading }}">Development</h3>
+          <ul class="list">
+            <li>{{ check }} Development server ready: {{ _.codeline('yarn start') }}</li>
+            <li>{{ check }} CSS Hot Module Replacement</li>
+            <li>{{ check }} JS Hot Module Replacement</li>
+            <li>{{ check }} Reload on template edit</li>
+            <li>{{ check }} PurgeCss</li>
+          </ul>
+        </article>
+        <article class="md:w-1/3 md:pl-16">
+          <h3 class="{{ subheading }}">Production</h3>
+          <ul class="list">
+            <li>{{ check }} Production ready: {{ _.codeline('yarn build') }}</li>
+            <li>{{ check }} Extract manifest.js</li>
+            <li>{{ check }} PurgeCss</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section data-module="sample" id="sandbox" class="mb-20 border p-16">
+      <h2 class="{{ heading }}">Sandbox</h2>
+      <p class="mb-12 md:w-1/2">Sample component (see: {{_.codeline("./src/css/buttons.css")}}) and module (see: {{_.codeline("./src/js/modules/sample.js")}}):</p>
+      <p class="counter"></p>
+      <button class="btn mb-8">Button</button>
+    </section>
+  </main>
+{% endblock %}
