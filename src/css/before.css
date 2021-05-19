@@ -1,9 +1,0 @@
-/**
- * This injects any base classes that tailwindcss plugins might add
- */
-@import 'tailwindcss/base';
-
-/**
- * This injects our own base classes since we are turning off tailwind's "preflight"
- */
-@import 'base/*';

@@ -1,4 +1,3 @@
-/**
- * This injects any component classes that have been extracted
- */
-@import 'components/*';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
