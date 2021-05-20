@@ -7,19 +7,7 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=development webpack serve --config webpack.dev.js",
-    "lint-js": "eslint './src/js/**/*.js'",
-    "lint-css": "stylelint './src/css/**/*.css'",
-    "fix-css": "yarn lint-css --fix",
-    "fix-js": "yarn lint-js --fix",
-    "prettify": "yarn prettier --write",
-    "prettier": "prettier './**/*.{js,jsx,json,yml,yaml,css,less,scss,ts,tsx,md,mdx,graphql,vue}'",
-    "format": "yarn prettify && yarn fix-js && yarn fix-css",
     "analyze": "yarn build --profile --json=stats.json && webpack-bundle-analyzer stats.json public/"
-  },
-  "jest-runner-eslint": {
-    "cliOptions": {
-      "ignorePath": "./.gitignore"
-    }
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
