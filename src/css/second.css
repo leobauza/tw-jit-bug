@@ -1,0 +1,5 @@
+@import 'second/*';
+
+body {
+  @apply bg-gray-100;
+}

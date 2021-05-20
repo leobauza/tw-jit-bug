@@ -1,6 +1,19 @@
 {% extends "layout.twig" %}
 {% block content %}
-<main class="p-100">
-  <h1>hello world</h1>
+<main class="p-150">
+  <h1 class="btn text-white p-2">hello world</h1>
+
+  <section class="p-40">
+    <h2 class="mb-24 font-bold">To Reproduce:</h2>
+    <ol class="list-decimal space-y-8 pl-40">
+      <li>Start dev server with <code class="bg-yellow-100">yarn start</code></li>
+      <li>Open <code class="bg-yellow-100">tailwind.config.js</code></li>
+      <li>Change the value of <code class="bg-yellow-100">spacing[150]</code></li>
+      <li>There will be no change until <code class="bg-yellow-100">src/css/styles.css</code> file is saved</li>
+      <li>Open <code class="bg-yellow-100">./src/js/second.js</code></li>
+      <li>Comment out the line <code class="bg-yellow-100">import '../css/second.css'</code></li>
+      <li>Doing step 2 and 3 result in a normal HMR update</li>
+    </ol>
+  </section>
 </main>
 {% endblock %}

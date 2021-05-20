@@ -1,6 +1,5 @@
 const path = require('path')
 const { merge } = require('webpack-merge')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -64,11 +63,13 @@ module.exports = merge(common, {
       template: 'src/index.twig',
       alwaysWriteToDisk: true,
     }),
-    new webpack.HotModuleReplacementPlugin(),
   ],
   output: {
     publicPath: '',
     filename: 'assets/js/[name].bundle.js',
     path: path.resolve(__dirname, 'public'),
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
 })

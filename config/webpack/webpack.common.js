@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   entry: {
     app: './src/js/index.js',
+    second: './src/js/second.js',
   },
   module: {
     rules: [
